@@ -20,15 +20,15 @@ console.log(prezzoBase)
 if (eta <= 18) {
   let sconto = prezzoBase * 0.2;
   let prezzoFinale = prezzoBase - sconto;
-  alert(prezzoFinale)
+  alert(prezzoFinale.toFixed(2))
 } else if (eta >= 65) {
   let sconto = prezzoBase * 0.4;
   let prezzoFinale = prezzoBase - sconto;
-  alert(prezzoFinale)
+  alert(prezzoFinale.toFixed(2))
 } else {
   sconto = 0;
   let prezzoFinale = prezzoBase - sconto;
-  alert(prezzoFinale)
+  alert(prezzoFinale.toFixed(2))
 }
 
 //Calcolo Prezzo Finale come Prezzo Base - Sconto e lo fisso a 2 decimali e lo mostro come alert
