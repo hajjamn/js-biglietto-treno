@@ -17,4 +17,20 @@ console.log(prezzoBase)
 
 //Calcolo Sconto per Minorenne o Oltre i 65 anni, altrimenti lo fisso per 0%
 
+if (eta <= 18) {
+  let sconto = prezzoBase * 0.2;
+  let prezzoFinale = prezzoBase - sconto;
+  alert(prezzoFinale)
+} else if (eta >= 65) {
+  let sconto = prezzoBase * 0.4;
+  let prezzoFinale = prezzoBase - sconto;
+  alert(prezzoFinale)
+} else {
+  sconto = 0;
+  let prezzoFinale = prezzoBase - sconto;
+  alert(prezzoFinale)
+}
+
 //Calcolo Prezzo Finale come Prezzo Base - Sconto e lo fisso a 2 decimali e lo mostro come alert
+
+/* Ho dovuto fare tutto insieme perché altrimenti le variabili restavano definite solo nel blocco */
