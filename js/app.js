@@ -1,6 +1,9 @@
-console.log('ciao mondo')
+/* console.log('ciao mondo') */
 
 //Richiedo e salvo costante Età
+
+const eta = parseInt(prompt('Inserire età'))
+console.log(eta)
 
 //Richiedo e salvo costante Kilometri
 
