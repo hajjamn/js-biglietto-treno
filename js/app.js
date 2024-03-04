@@ -19,14 +19,17 @@ console.log(prezzoBase)
 
 if (eta <= 18) {
   let sconto = prezzoBase * 0.2;
+  console.log(sconto)
   let prezzoFinale = prezzoBase - sconto;
   alert(prezzoFinale.toFixed(2))
 } else if (eta >= 65) {
   let sconto = prezzoBase * 0.4;
+  console.log(sconto)
   let prezzoFinale = prezzoBase - sconto;
   alert(prezzoFinale.toFixed(2))
 } else {
   sconto = 0; /* In alternativa potremmo semplicemente stampare il prezzo base e risparmiarci un'operazione con alert(prezzoBase.toFixed(2)) */
+  console.log(sconto)
   let prezzoFinale = prezzoBase - sconto;
   alert(prezzoFinale.toFixed(2));
 }
