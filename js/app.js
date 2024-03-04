@@ -7,6 +7,9 @@ console.log(eta)
 
 //Richiedo e salvo costante Kilometri
 
+const kilometraggio = parseFloat(prompt('Inserire kilometraggio'))
+console.log(kilometraggio)
+
 //Calcolo Prezzo Base Biglietto facendo Kilometri x 0.21
 
 //Calcolo Sconto per Minorenne o Oltre i 65 anni, altrimenti lo fisso per 0%
