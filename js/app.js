@@ -3,37 +3,29 @@
 //Richiedo e salvo costante Età
 
 const eta = parseInt(prompt('Inserire età'))
-console.log(eta)
+console.log('Età = ' + eta)
 
 //Richiedo e salvo costante Kilometri
 
 const kilometraggio = parseFloat(prompt('Inserire kilometraggio'))
-console.log(kilometraggio)
+console.log('Kilometraggio = ' + kilometraggio)
 
 //Calcolo Prezzo Base Biglietto facendo Kilometri x 0.21
 
-const prezzoBase = kilometraggio * 0.21;
-console.log(prezzoBase)
+let prezzo = kilometraggio * 0.21;
+console.log('Prezzo base = ' + prezzo)
 
 //Calcolo Sconto per Minorenne o Oltre i 65 anni, altrimenti lo fisso per 0%
 
 if (eta <= 18) {
-  let sconto = prezzoBase * 0.2;
-  console.log(sconto)
-  let prezzoFinale = prezzoBase - sconto;
-  alert(prezzoFinale.toFixed(2))
+  let sconto = prezzo * 0.2;
+  console.log('Sconto = ' + sconto)
+  prezzo = prezzo - sconto;
 } else if (eta >= 65) {
-  let sconto = prezzoBase * 0.4;
-  console.log(sconto)
-  let prezzoFinale = prezzoBase - sconto;
-  alert(prezzoFinale.toFixed(2))
+  let sconto = prezzo * 0.4;
+  console.log('Sconto = ' + sconto)
+  prezzo = prezzo - sconto;
 } else {
-  sconto = 0; /* In alternativa potremmo semplicemente stampare il prezzo base e risparmiarci un'operazione con alert(prezzoBase.toFixed(2)) */
-  console.log(sconto)
-  let prezzoFinale = prezzoBase - sconto;
-  alert(prezzoFinale.toFixed(2));
 }
 
-//Calcolo Prezzo Finale come Prezzo Base - Sconto e lo fisso a 2 decimali e lo mostro come alert
-
-/* Ho dovuto fare tutto insieme perché altrimenti le variabili restavano definite solo nel blocco */
+console.log('Prezzo finale = ' + prezzo)
