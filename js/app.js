@@ -12,20 +12,24 @@ console.log('Kilometraggio = ' + kilometraggio)
 
 //Calcolo Prezzo Base Biglietto facendo Kilometri x 0.21
 
-let prezzo = kilometraggio * 0.21;
-console.log('Prezzo base = ' + prezzo)
+let prezzoBase = kilometraggio * 0.21;
+console.log('Prezzo base = ' + prezzoBase)
 
 //Calcolo Sconto per Minorenne o Oltre i 65 anni, altrimenti lo fisso per 0%
 
+let sconto
+
 if (eta <= 18) {
-  let sconto = prezzo * 0.2;
+  sconto = prezzoBase * 0.2;
   console.log('Sconto = ' + sconto)
-  prezzo = prezzo - sconto;
 } else if (eta >= 65) {
-  let sconto = prezzo * 0.4;
+  sconto = prezzoBase * 0.4;
   console.log('Sconto = ' + sconto)
-  prezzo = prezzo - sconto;
 } else {
+  sconto = 0;
 }
 
-console.log('Prezzo finale = ' + prezzo)
+// Calcolo prezzo finale facendo prezzoBase - sconto
+
+let prezzoFinale = prezzoBase - sconto;
+console.log('Prezzo finale = ' + prezzoFinale.toFixed(2));
